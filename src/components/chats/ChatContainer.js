@@ -149,9 +149,9 @@ export default class ChatContainer extends Component {
 	}
 
 	/*
-	*	Adds a message to the specified chat
-	*	@param chatId {number}  The id of the chat to be added to.
-	*	@param message {string} The message to be added to the chat.
+	*	Thêm tin nhắn vào cuộc trò chuyện chỉ định
+	*	@param chatId {number}  Id của cuộc trò chuyện sẽ thêm vào.
+	*	@param message {string} nội dung tin nhắn được thêm vào cuộc trò chuyện.
 	*/
 	sendMessage = (chatId, message)=>{
 		const { socket } = this.props
@@ -159,9 +159,9 @@ export default class ChatContainer extends Component {
 	}
 
 	/*
-	*	Sends typing status to server.
-	*	chatId {number} the id of the chat being typed in.
-	*	typing {boolean} If the user is typing still or not.
+	*	gửi nội dung lên server
+	*	chatId {number} id của phòng chat.
+	*	typing {boolean} trạng thái khi khi dùng nhập.
 	*/
 	sendTyping = (chatId, isTyping)=>{
 		const { socket } = this.props
