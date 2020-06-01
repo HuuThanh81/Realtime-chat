@@ -75,7 +75,7 @@ export default class ChatContainer extends Component {
 	}
 
 	/*
-	*	Reset the chat back to only the chat passed in.
+	*	đặt lại cuộc trò chuyện khi người dùng còn ở lại
 	* 	@param chat {Chat}
 	*/
 	resetChat = (chat)=>{
@@ -83,12 +83,12 @@ export default class ChatContainer extends Component {
 	}
 
 	/*
-	*	Adds chat to the chat container, if reset is true removes all chats
-	*	and sets that chat to the main chat.
-	*	Sets the message and typing socket events for the chat.
+	*	thêm cuộc trò chuyện vào danh sách các cuộc trò chuyện.
+	*	đặt cuộc trò chuyện được tạo này thành cuộc trò chuyện chính.
+	*	đặt các thông báo và nội dung của cuộc trò chuyện vào socket.
 	*	
-	*	@param chat {Chat} the chat to be added.
-	*	@param reset {boolean} if true will set the chat as the only chat.
+	*	@param chat {Chat} cuộc trò chuyện được thêm.
+	*	@param reset {boolean} nếu đúng thì đặt cuộc trò chuyện này thành cuộc trò chuyện chính.
 	*/
 	addChat = (chat, reset = false)=>{
 		const { socket } = this.props
@@ -105,8 +105,8 @@ export default class ChatContainer extends Component {
 	}
 
 	/*
-	* 	Returns a function that will 
-	*	adds message to chat with the chatId passed in. 
+	* 	trả về một hàm sẽ  
+	*	thêm tin nhắn vào cuộc trò chuyện có id được truyền. 
 	*
 	* 	@param chatId {number}
 	*/
@@ -124,7 +124,7 @@ export default class ChatContainer extends Component {
 	}
 
 	/*
-	*	Updates the typing of chat with id passed in.
+	*	cập nhật trạng thái nhập nội dung và id được truyền.
 	*	@param chatId {number}
 	*/
 	updateTypingInChat = (chatId) =>{

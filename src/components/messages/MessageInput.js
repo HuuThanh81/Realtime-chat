@@ -37,8 +37,8 @@ export default class MessageInput extends Component {
 	}
 
 	/*
-	*	startCheckingTyping
-	*	Start an interval that checks if the user is typing.
+	*	bắt đầu kiểm tra trạng thái nhập nội dung
+	*	bắt đầu kiểm tra nội dugn trong khoảng thời gian người dùng đang gõ.
 	*/
 	startCheckingTyping = ()=>{
 		this.typingInterval = setInterval(()=>{
@@ -50,8 +50,7 @@ export default class MessageInput extends Component {
 	}
 	
 	/*
-	*	stopCheckingTyping
-	*	Start the interval from checking if the user is typing.
+	*	dừng kiểm tra trạng thái nhập nội dung.
 	*/
 	stopCheckingTyping = ()=>{
 		if(this.typingInterval){
